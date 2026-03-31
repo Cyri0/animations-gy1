@@ -1,3 +1,5 @@
+import styles from "./Emoji.module.css"
+
 type EmojiProps = {
     emoji: string,
     text: string
@@ -5,7 +7,7 @@ type EmojiProps = {
 
 const Emoji = ({emoji,text}: EmojiProps) => {
   return (
-    <div>{emoji}</div>
+    <div className={styles.emoji}>{emoji}</div>
   )
 }
 

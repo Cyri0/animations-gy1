@@ -1,0 +1,10 @@
+.emoji{
+    font-size: 3rem;
+    user-select: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.emoji:hover{
+    transform: scale(2) translateY(-10px);
+}
