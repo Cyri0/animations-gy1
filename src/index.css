@@ -1,0 +1,14 @@
+:root{
+  --bg: #16171d;
+}
+
+body{
+  background: var(--bg);
+  color: whitesmoke;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
