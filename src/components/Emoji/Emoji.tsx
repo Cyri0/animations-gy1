@@ -7,7 +7,7 @@ type EmojiProps = {
 
 const Emoji = ({emoji,text}: EmojiProps) => {
   return (
-    <div className={styles.emoji}>{emoji}</div>
+    <div className={styles.emoji} data-before={text}>{emoji}</div>
   )
 }
 

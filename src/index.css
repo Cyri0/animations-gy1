@@ -2,6 +2,10 @@
   --bg: #16171d;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   background: var(--bg);
   color: whitesmoke;

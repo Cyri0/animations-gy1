@@ -1,0 +1,45 @@
+.background{
+    --border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.background:hover::before{
+    content: "";
+    width: 200%;
+    aspect-ratio: 1 / 1;
+    background: conic-gradient(
+        transparent 90deg,
+        #4285F4 180deg,
+        #EA4335,
+        #34A853,
+        #FBBC05,
+        transparent);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    animation-name: doTheRotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: -1;
+}
+
+.foreground{
+    background: white;
+    margin: 5px;
+    padding: 10px 20px;
+    color: black;
+    border-radius: var(--border-radius);
+}
+
+@keyframes doTheRotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

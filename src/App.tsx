@@ -1,9 +1,12 @@
+import AnimatedBorder from "./components/AnimatedBorder/AnimatedBorder"
 import EmojiWrapper from "./components/Emoji/EmojiWrapper"
 
 const App = () => {
   return (
     <div>
-      <EmojiWrapper/>
+      {/* <EmojiWrapper/> */}
+
+      <AnimatedBorder/>
     </div>
   )
 }
