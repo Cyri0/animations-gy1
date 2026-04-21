@@ -7,18 +7,15 @@ import SnowFall from "./components/SnowFall/SnowFall"
 const App = () => {
   return (
     <div>
-
-  <h1>HELLO</h1>
-
-      <EmojiWrapper/>
+      {/* <EmojiWrapper/>
       <AnimatedBorder/>
       {/* <SnowFall/> */}
-      {/* <AnimatedTitle titles={[
-        {name:"Hello",bgColor:"red"},
-        {name:"Világ",bgColor:"green"}
-      ]} /> */}
-
-      <NewtonsCradle/>
+      <AnimatedTitle titles={[
+        {name:"Hello",bgColor:"orange"},
+        {name:"Világ",bgColor:"green"},
+        {name:"Hihihi",bgColor:"darkred"},
+      ]} />
+      {/* <NewtonsCradle/> */}
     </div>
   )
 }
