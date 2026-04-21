@@ -6,13 +6,34 @@
 }
 
 .hammer{
+    transform: rotate(-45deg);
     width: 20%;
     aspect-ratio: 4 / 3;
     background: gray;
     border-radius: 10px;
+    top: 40%;
+    left: 70%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: rotate(-45deg);
+    animation: hammerAnim;
+    animation-direction: reverse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 220%;
 }
 
+.hammer:before{
+    transform: translate(-50%, -5%);
+    content: "";
+    width: 20%;
+    height: 220%;
+    background: rgb(77, 40, 6);
+    border-radius: 10px;
+    left: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes hammerAnim {
+    0% { transform: rotate(-45deg); }
+    50% { transform: rotate(-90deg); }
+}
