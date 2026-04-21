@@ -1,0 +1,18 @@
+.hammerWrapper{
+    width: 500px;
+    aspect-ratio:  4 / 3;
+    background: skyblue;
+    position: relative;
+}
+
+.hammer{
+    width: 20%;
+    aspect-ratio: 4 / 3;
+    background: gray;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-45deg);
+}
+
