@@ -17,11 +17,25 @@ const SnowFall = () => {
         setSnowflakes(prev => [...prev, {
             symbol: "❄️",
             size: Math.floor(Math.random()*2) + 1,
-            speed: Math.floor(Math.random()*5) + 1,
+            speed: Math.floor(Math.random()*5) + 5,
             xPos: Math.floor(Math.random()*window.innerWidth) + 1,
-            yPos: 100
+            yPos: Math.floor(Math.random()*window.innerHeight) + 1
         }])
     }
+
+    const intervalId = setInterval(()=>{
+        setSnowflakes(prev => prev.map(snowflake => {
+            let newY =  window.innerHeight < snowflake.yPos ?
+                        0 :
+                        snowflake.yPos + snowflake.speed;
+            return {
+                ...snowflake,
+                yPos: newY,
+            }
+        }))
+    }, 30)
+
+    return () => clearInterval(intervalId)
   },[])
 
   return (
