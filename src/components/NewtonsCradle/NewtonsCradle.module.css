@@ -1,7 +1,80 @@
 .cradle{
+    width: 500px;
+    aspect-ratio: 4 / 3;
+    background: skyblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10%;
+}
 
+.cradle::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 10%;
+    background: rgb(41, 41, 41);
+    top: 10px;
 }
 
 .ball{
-    
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ball::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15%;
+    aspect-ratio: 1 / 2;
+    background: white;
+    border-radius: 50%;
+    rotate: -20deg;
+}
+
+.ball::before{
+    content: "";
+    width: 2px;
+    height: 500%;
+    background: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: -150%;
+}
+
+.ball:first-child{
+    transform: rotate(0deg);
+    transform-origin: 50% -500%;
+    animation: firstBall;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+}
+
+@keyframes firstBall {
+    0% {transform: rotate(20deg);}
+    50% {transform: rotate(0deg);}
+}
+
+.ball:last-child{
+    transform: rotate(0deg);
+    transform-origin: 50% -500%;
+    animation: lastBall;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+}
+
+@keyframes lastBall {
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(-20deg);}
 }

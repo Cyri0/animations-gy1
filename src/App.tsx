@@ -7,6 +7,9 @@ import SnowFall from "./components/SnowFall/SnowFall"
 const App = () => {
   return (
     <div>
+
+  <h1>HELLO</h1>
+
       <EmojiWrapper/>
       <AnimatedBorder/>
       {/* <SnowFall/> */}
