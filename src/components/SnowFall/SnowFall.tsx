@@ -9,7 +9,7 @@ type SnowFlakeType = {
 }
 
 const SnowFall = () => {
-  const snowflakeNumber = 50
+  const snowflakeNumber = 100
   const [snowflakes, setSnowflakes] = useState<SnowFlakeType[]>([])
   
   useEffect(()=>{
@@ -45,7 +45,8 @@ const SnowFall = () => {
         position: "fixed",
         top: "0px",
         left: "0px",
-        overflow: "hidden"
+        overflow: "hidden",
+        zIndex: -1
     }}>
         {snowflakes.map(snowflake => 
         <div style={{
