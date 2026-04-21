@@ -39,7 +39,14 @@ const SnowFall = () => {
   },[])
 
   return (
-    <div>
+    <div style={{
+        width: "100vw",
+        height: "100vh",
+        position: "fixed",
+        top: "0px",
+        left: "0px",
+        overflow: "hidden"
+    }}>
         {snowflakes.map(snowflake => 
         <div style={{
             fontSize: `${snowflake.size}rem`,
